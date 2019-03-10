@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Card, CardTitle, CardText, Grid, Cell } from 'react-md';
 
 class ProductCard extends Component {
+  constructor(props) {
+    super(props)
+  }
+
   render() {
     <Card className="md-block">
       <CardTitle title={this.props.title} subtitle={this.props.categories} />
@@ -12,8 +16,8 @@ class ProductCard extends Component {
           </Cell>
           <Cell size={8}>
             <p>{this.props.description}</p>
-            <span><b>Stock:</b> {this.props.stock}</span>
-            <span><b>Price:</b> {this.props.price}</span>
+            <div><span><b>Stock:</b> {this.props.stock}</span></div>
+            <div><span><b>Price:</b> {this.props.price}</span></div>
           </Cell>
         </Grid>
       </CardText>
