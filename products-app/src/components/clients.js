@@ -6,7 +6,9 @@ class Clients extends Component {
   }
   
   render() {
-    <h1>Clients</h1>
+    return (
+      <h1>Clients</h1>
+    )
   }
 }
 

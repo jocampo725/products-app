@@ -1,12 +1,12 @@
 import axios from 'axios/index';
-import * as api from './constants/api';
+import * as _api from '../constants/api';
 
 const api = {
   getProducts() {
-    return axios.get(`${api.API_URL}/products`);
+    return axios.get(`${_api.API_URL}/products`);
   },
   getProductsByCategory(category) {
-    return axios.get(`${api.API_URL}/products/${category}`);
+    return axios.get(`${_api.API_URL}/products/${category}`);
   }
 };
 

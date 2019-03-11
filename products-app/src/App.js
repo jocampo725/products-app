@@ -10,6 +10,8 @@ import './App.css';
 import Home from './components/home';
 import Contact from './components/contact';
 import Clients from './components/clients';
+import Products from './components/products';
+import ProductDetails from './components/productsByCategory';
 
 class App extends Component {
   constructor(props) {
@@ -43,7 +45,7 @@ class App extends Component {
             dynamic={false}
             links={links}
             colored
-            activeIndex={activeIndex}
+            activeIndex={this.state.activeIndex}
             onNavChange={this.handleNavChange}
           />
           <Route exact path={routes.HOME} component={() => <Home />} />
