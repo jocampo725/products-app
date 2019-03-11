@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ProductCard from './productCard';
 import api from '../utils/api';
 
-class Products extends Component {
+class ProductsByCategory extends Component {
   constructor(props) {
     super(props);
 
@@ -14,7 +14,8 @@ class Products extends Component {
   }
 
   componentDidMount() {
-    api.getProducts().then(response => {
+    const { match: { params } } = this.props;
+    api.getProductsByCategory(params.category).then(response => {
       this.setState({
         products: response.data
       })
@@ -38,4 +39,4 @@ class Products extends Component {
   }
 }
 
-export default Products;
+export default ProductsByCategory;
