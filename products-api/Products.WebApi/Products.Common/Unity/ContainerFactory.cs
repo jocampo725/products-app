@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Products.Common.Unity
+﻿namespace Products.Common.Unity
 {
     using Microsoft.Practices.Unity;
     using Microsoft.Practices.Unity.Configuration;
@@ -13,7 +7,6 @@ namespace Products.Common.Unity
 
     public class ContainerFactory : IDisposable
     {
-
         private IUnityContainer container;
 
         public ContainerFactory()

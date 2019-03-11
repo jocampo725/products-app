@@ -2,20 +2,22 @@
 {
     using System.Collections.Generic;
     using System.IO;
-    using Entity;
+    using Products.Entity;
+    using Products.Common.Helpers;
 
-    using Common.Helpers;
-
-    public class ReadJSONFile
+    public class ReadJSONFile : IReadJSONFileRepository
     {
-        public void LoadJson()
+        public ICollection<ProductsDto> LoadJson()
         {
+            ICollection<ProductsDto> products;
+
             using (StreamReader r = new StreamReader(Common.Constants.Products.JSONPath))
             {
                 string json = r.ReadToEnd();
-                List<ProductsDto> products = JsonHelper.Deserialize<List<ProductsDto>>(json);
+                products = JsonHelper.Deserialize<ICollection<ProductsDto>>(json);
             }
-        }
 
+            return products;
+        }
     }
 }
