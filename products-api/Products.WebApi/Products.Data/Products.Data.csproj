@@ -55,10 +55,5 @@
       <Name>Products.Entity</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="JSON\JSONProducts.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
