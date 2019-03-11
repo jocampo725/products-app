@@ -22,8 +22,18 @@
 
         public ICollection<ProductsDto> GetProductsByCategory(string category)
         {
+            List<ProductsDto> productsFiltered = new List<ProductsDto>();
             ICollection<ProductsDto> products = _productRepository.LoadJson();
-            return (ICollection<ProductsDto>)products.Where(p => p.categories.Contains(category));
+
+            foreach (var product in products)
+            {
+                if (product.categories.IndexOf(category) != -1)
+                {
+                    productsFiltered.Add(product);
+                }
+            }
+
+            return productsFiltered;
         }
     }
 }

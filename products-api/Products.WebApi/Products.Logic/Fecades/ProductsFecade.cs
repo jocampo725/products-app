@@ -25,14 +25,14 @@
             }
         }
 
-        public ICollection<ProductsDto> GetProductsByCategory()
+        public ICollection<ProductsDto> GetProductsByCategory(string category)
         {
             try
             {
                 using (var container = new ContainerFactory())
                 {
                     IProductService productsService = container.GetContainer().Resolve<IProductService>();
-                    return productsService.GetAllProducts();
+                    return productsService.GetProductsByCategory(category);
                 }
             }
             catch (Exception)

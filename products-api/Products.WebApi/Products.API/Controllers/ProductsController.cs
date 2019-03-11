@@ -7,15 +7,23 @@
     using Products.Common.Helpers;
     using System.Web.Http.Results;
 
-    [RoutePrefix("api/products")]
     public class ProductsController : ApiController
     {
         [HttpGet]
-        [Route("getall")]
+        [Route("api/products")]
         public ICollection<ProductsDto> GetAllProducts()
         {
             ProductsFecade entryFacade = new ProductsFecade();
             ICollection<ProductsDto> result = entryFacade.GetAllProducts();
+            return result;
+        }
+
+        [HttpGet]
+        [Route("api/products/{category}")]
+        public ICollection<ProductsDto> GetProductsByCategory(string category)
+        {
+            ProductsFecade entryFacade = new ProductsFecade();
+            ICollection<ProductsDto> result = entryFacade.GetProductsByCategory(category);
             return result;
         }
     }
