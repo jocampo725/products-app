@@ -27,10 +27,10 @@ class Products extends Component {
     return (
       <div>
         <Grid className="grid-example">
-          <Cell size={4}>
+          <Cell size={3}>
             <CategoriesPanel />
           </Cell>
-          <Cell size={8}>
+          <Cell size={9}>
             <span>Showing <b>{this.state.showingProducts}</b> products - Hidden: <b>{this.state.hiddenProducts}</b></span>
             {this.state.products.map((product) => {
               return (

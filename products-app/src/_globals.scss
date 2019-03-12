@@ -3,3 +3,33 @@
 // Any variable overrides. The following just changes the default theme to use teal and purple.
 $md-primary-color: $md-grey-500;
 $md-secondary-color: $md-grey-600;
+
+.list {
+  &__filters {
+    width: 100%;
+  }
+}
+
+.topnav {
+  background-color: $md-primary-color;
+  overflow: hidden;
+
+  a {
+    float: left;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  a:hover {
+    background-color: $md-secondary-color;
+    color: #fff;
+  }
+
+  a.active {
+    background-color: $md-primary-color;
+    color: white;
+  }
+}

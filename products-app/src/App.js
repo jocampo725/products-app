@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Link
 } from 'react-router-dom';
-import { BottomNavigation } from 'react-md';
 import * as routes from './constants/routes';
 
 import './App.css';
@@ -28,26 +28,15 @@ class App extends Component {
   };
 
   render() {
-    const links = [{
-      label: routes.HOME
-    }, {
-      label: routes.PRODUCTS
-    }, {
-      label: routes.CLIENTS
-    }, {
-      label: routes.CONTACT
-    }];
-
     return (
       <Router>
         <div>
-          <BottomNavigation
-            dynamic={false}
-            links={links}
-            colored
-            activeIndex={this.state.activeIndex}
-            onNavChange={this.handleNavChange}
-          />
+          <div className="topnav">
+            <Link to={routes.HOME}>HOME</Link>
+            <Link to={routes.PRODUCTS}>PRODUCTS</Link>
+            <Link to={routes.CLIENTS}>CLIENTS</Link>
+            <Link to={routes.CONTACT}>CONTACT</Link>
+          </div>
           <Route exact path={routes.HOME} component={Home} />
           <Route exact path={routes.PRODUCTS} component={Products} />
           <Route exact path={routes.PRODUCT_DETAILS} component={ProductDetails} />

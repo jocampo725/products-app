@@ -14,7 +14,7 @@ class CategoriesPanel extends Component {
   render() {
     return (
       <div className="md-grid">
-        <List className="md-cell-12">
+        <List className="list__filters md-paper md-paper--1">
           <Subheader primary primaryText="Categories" />
           <Link to={routes.PRODUCTS}>
             <ListItem primaryText="All" leftAvatar={<Avatar icon={<FontIcon iconClassName="fa fa-list-ul" />} />} />
