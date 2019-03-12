@@ -9,7 +9,7 @@ class ProductCard extends Component {
         <CardText>
           <Grid className="grid-example">
             <Cell size={4}>
-              <img src={this.props.photo} alt={this.props.name} />
+              <img src={this.props.photo} width="160px" alt={this.props.name} />
             </Cell>
             <Cell size={8}>
               <p>{this.props.description}</p>
