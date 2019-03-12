@@ -10,7 +10,7 @@
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 500; }
     .menu__topnav a:hover {
       background-color: #757575;
@@ -27,5 +27,9 @@
       width: 100%; }
       .products__container .md-cell--3 .list__container-filters {
         width: 100%; }
+      .products__container .md-cell--3 .list__container--link {
+        text-decoration: none; }
   .products__container .card__product {
     margin: 12px 12px 12px 0; }
+    .products__container .card__product-title {
+      padding-bottom: 0; }
