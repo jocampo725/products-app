@@ -13,21 +13,19 @@
         [HttpGet]
         [Route("api/products")]
         [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
-        public ICollection<ProductsDto> GetAllProducts()
+        public ProductosResponse GetAllProducts()
         {
             ProductsFecade entryFacade = new ProductsFecade();
-            ICollection<ProductsDto> result = entryFacade.GetAllProducts();
-            return result;
+            return entryFacade.GetAllProducts();
         }
 
         [HttpGet]
         [Route("api/products/{category}")]
         [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
-        public ICollection<ProductsDto> GetProductsByCategory(string category)
+        public ProductosResponse GetProductsByCategory(string category)
         {
             ProductsFecade entryFacade = new ProductsFecade();
-            ICollection<ProductsDto> result = entryFacade.GetProductsByCategory(category);
-            return result;
+            return entryFacade.GetProductsByCategory(category);
         }
     }
 }

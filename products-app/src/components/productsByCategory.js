@@ -19,7 +19,9 @@ class ProductsByCategory extends Component {
     const { match: { params } } = this.props;
     api.getProductsByCategory(params.category).then(response => {
       this.setState({
-        products: response.data
+        products: response.data.Products,
+        showingProducts: response.data.ShowingProducts,
+        hiddenProducts: response.data.HiddenProducts
       })
     });
   }

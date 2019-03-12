@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using Products.Entity;
-
-namespace Products.Logic.Interfaces
+﻿namespace Products.Logic.Interfaces
 {
+    using Products.Entity;
+
     public interface IProductService
     {
-        ICollection<ProductsDto> GetAllProducts();
+        ProductosResponse GetAllProducts();
 
-        ICollection<ProductsDto> GetProductsByCategory(string category);
+        ProductosResponse GetProductsByCategory(string category);
     }
 }

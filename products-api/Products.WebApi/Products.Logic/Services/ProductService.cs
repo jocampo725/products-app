@@ -15,13 +15,19 @@
             _productRepository = productRepository;
         }
 
-        public ICollection<ProductsDto> GetAllProducts()
+        public ProductosResponse GetAllProducts()
         {
-            return _productRepository.LoadJson();
+            ProductosResponse response = new ProductosResponse();
+            ICollection<ProductsDto> products = _productRepository.LoadJson();
+            response.Products = products;
+            response.ShowingProducts = products.Count;
+            response.HiddenProducts = 0;
+            return response;
         }
 
-        public ICollection<ProductsDto> GetProductsByCategory(string category)
+        public ProductosResponse GetProductsByCategory(string category)
         {
+            ProductosResponse response = new ProductosResponse();
             List<ProductsDto> productsFiltered = new List<ProductsDto>();
             ICollection<ProductsDto> products = _productRepository.LoadJson();
 
@@ -33,7 +39,10 @@
                 }
             }
 
-            return productsFiltered;
+            response.Products = productsFiltered;
+            response.ShowingProducts = productsFiltered.Count;
+            response.HiddenProducts = products.Count - productsFiltered.Count;
+            return response;
         }
     }
 }

@@ -18,7 +18,9 @@ class Products extends Component {
   componentDidMount() {
     api.getProducts().then(response => {
       this.setState({
-        products: response.data
+        products: response.data.Products,
+        showingProducts: response.data.ShowingProducts,
+        hiddenProducts: response.data.HiddenProducts
       })
     });
   }

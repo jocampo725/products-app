@@ -9,7 +9,7 @@
 
     public class ProductsFecade
     {
-        public ICollection<ProductsDto> GetAllProducts()
+        public ProductosResponse GetAllProducts()
         {
             try
             {
@@ -25,7 +25,7 @@
             }
         }
 
-        public ICollection<ProductsDto> GetProductsByCategory(string category)
+        public ProductosResponse GetProductsByCategory(string category)
         {
             try
             {
