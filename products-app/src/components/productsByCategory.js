@@ -27,7 +27,7 @@ class ProductsByCategory extends Component {
   render() {
     return (
       <div>
-        <Grid className="grid-example">
+        <Grid className="products__container">
           <Cell size={3}>
             <CategoriesPanel />
           </Cell>

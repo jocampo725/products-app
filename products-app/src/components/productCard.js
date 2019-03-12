@@ -4,7 +4,7 @@ import { Card, CardTitle, CardText, Grid, Cell } from 'react-md';
 class ProductCard extends Component {
   render() {
     return (
-      <Card className="md-block">
+      <Card className="md-block card__product">
         <CardTitle title={this.props.name} subtitle={this.props.categories.join(" - ") + " - " + this.props.brand} />
         <CardText>
           <Grid className="grid-example">

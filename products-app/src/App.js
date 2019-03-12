@@ -31,11 +31,13 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <div className="topnav">
-            <Link to={routes.HOME}>HOME</Link>
-            <Link to={routes.PRODUCTS}>PRODUCTS</Link>
-            <Link to={routes.CLIENTS}>CLIENTS</Link>
-            <Link to={routes.CONTACT}>CONTACT</Link>
+          <div className="menu">
+            <div className="menu__topnav">
+              <Link to={routes.HOME}>HOME</Link>
+              <Link to={routes.PRODUCTS}>PRODUCTS</Link>
+              <Link to={routes.CLIENTS}>CLIENTS</Link>
+              <Link to={routes.CONTACT}>CONTACT</Link>
+            </div>
           </div>
           <Route exact path={routes.HOME} component={Home} />
           <Route exact path={routes.PRODUCTS} component={Products} />

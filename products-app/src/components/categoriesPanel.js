@@ -13,23 +13,25 @@ import {
 class CategoriesPanel extends Component {
   render() {
     return (
-      <div className="md-grid">
-        <List className="list__filters md-paper md-paper--1">
-          <Subheader primary primaryText="Categories" />
-          <Link to={routes.PRODUCTS}>
-            <ListItem primaryText="All" leftAvatar={<Avatar icon={<FontIcon iconClassName="fa fa-list-ul" />} />} />
-          </Link>
-          <Divider />
-          <Link to={`${routes.PRODUCTS}/Tech`}>
-            <ListItem primaryText="Tech" leftAvatar={<Avatar icon={<FontIcon iconClassName="fa fa-laptop" />} />} />
-          </Link>
-          <Link to={`${routes.PRODUCTS}/Services`}>
-            <ListItem primaryText="Services" leftAvatar={<Avatar icon={<FontIcon iconClassName="fa fa-wrench" />} />} />
-          </Link>
-          <Link to={`${routes.PRODUCTS}/Office`}>
-            <ListItem primaryText="Office" leftAvatar={<Avatar icon={<FontIcon iconClassName="fa fa-folder" />} />} />
-          </Link>
-        </List>
+      <div className="list">
+        <div className="list__container">
+          <List className="list__container-filters md-paper md-paper--1">
+            <Subheader primary primaryText="Categories" />
+            <Link to={routes.PRODUCTS}>
+              <ListItem primaryText="All" leftAvatar={<Avatar icon={<FontIcon iconClassName="fa fa-list-ul" />} />} />
+            </Link>
+            <Divider />
+            <Link to={`${routes.PRODUCTS}/Tech`}>
+              <ListItem primaryText="Tech" leftAvatar={<Avatar icon={<FontIcon iconClassName="fa fa-laptop" />} />} />
+            </Link>
+            <Link to={`${routes.PRODUCTS}/Services`}>
+              <ListItem primaryText="Services" leftAvatar={<Avatar icon={<FontIcon iconClassName="fa fa-wrench" />} />} />
+            </Link>
+            <Link to={`${routes.PRODUCTS}/Office`}>
+              <ListItem primaryText="Office" leftAvatar={<Avatar icon={<FontIcon iconClassName="fa fa-folder" />} />} />
+            </Link>
+          </List>
+        </div>
       </div>
     )
   }

@@ -234,26 +234,6 @@ caption,
   top: 0;
   width: 100%; }
 
-.list__filters {
-  width: 100%; }
-
-.topnav {
-  background-color: #9e9e9e;
-  overflow: hidden; }
-  .topnav a {
-    float: left;
-    color: #fff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px; }
-  .topnav a:hover {
-    background-color: #757575;
-    color: #fff; }
-  .topnav a.active {
-    background-color: #9e9e9e;
-    color: white; }
-
 @media screen and (min-width: 320px) {
   .md-subheading-2,
   .md-subheading-1 {
