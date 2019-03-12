@@ -5,7 +5,7 @@ class ProductCard extends Component {
   render() {
     return (
       <Card className="md-block">
-        <CardTitle title={this.props.name} subtitle={this.props.brand} />
+        <CardTitle title={this.props.name} subtitle={this.props.categories.join(" - ") + " - " + this.props.brand} />
         <CardText>
           <Grid className="grid-example">
             <Cell size={4}>
