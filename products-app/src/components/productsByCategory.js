@@ -17,13 +17,26 @@ class ProductsByCategory extends Component {
 
   componentDidMount() {
     const { match: { params } } = this.props;
-    api.getProductsByCategory(params.category).then(response => {
+    this.productsQuery(params.category);
+  }
+
+  productsQuery(category) {
+    api.getProductsByCategory(category).then(response => {
       this.setState({
         products: response.data.Products,
         showingProducts: response.data.ShowingProducts,
         hiddenProducts: response.data.HiddenProducts
       })
     });
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    const { match: { params } } = this.props;
+    const nextParams = nextProps.match.params;
+
+    if (nextParams !== params) {
+      this.productsQuery(params.category);
+    }
   }
 
   render() {
