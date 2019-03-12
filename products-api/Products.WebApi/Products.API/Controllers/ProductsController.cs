@@ -6,11 +6,13 @@
     using Products.Entity;
     using Products.Common.Helpers;
     using System.Web.Http.Results;
+    using System.Web.Http.Cors;
 
     public class ProductsController : ApiController
     {
         [HttpGet]
         [Route("api/products")]
+        [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
         public ICollection<ProductsDto> GetAllProducts()
         {
             ProductsFecade entryFacade = new ProductsFecade();
@@ -20,6 +22,7 @@
 
         [HttpGet]
         [Route("api/products/{category}")]
+        [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
         public ICollection<ProductsDto> GetProductsByCategory(string category)
         {
             ProductsFecade entryFacade = new ProductsFecade();

@@ -2,18 +2,14 @@ import React, { Component } from 'react';
 import { Card, CardTitle, CardText, Grid, Cell } from 'react-md';
 
 class ProductCard extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <Card className="md-block">
-        <CardTitle title={this.props.title} subtitle={this.props.categories} />
+        <CardTitle title={this.props.name} subtitle={this.props.brand} />
         <CardText>
           <Grid className="grid-example">
             <Cell size={4}>
-              <img src={this.props.img_url} alt={this.props.title} />
+              <img src={this.props.photo} alt={this.props.name} />
             </Cell>
             <Cell size={8}>
               <p>{this.props.description}</p>

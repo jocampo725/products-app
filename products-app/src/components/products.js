@@ -28,9 +28,10 @@ class Products extends Component {
         {this.state.products.map((product) => {
           return (
             <ProductCard
-              title={product.title}
+              name={product.name}
               categories={product.categories}
-              img_url={product.img_url}
+              brand={product.brand}
+              photo={product.photo}
               description={product.description}
               stock={product.stock}
               price={product.price} />
