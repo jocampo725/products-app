@@ -48,11 +48,11 @@ class App extends Component {
             activeIndex={this.state.activeIndex}
             onNavChange={this.handleNavChange}
           />
-          <Route exact path={routes.HOME} component={() => <Home />} />
-          <Route exact path={routes.PRODUCTS} component={() => <Products />} />
-          <Route exact path={routes.PRODUCT_DETAILS} component={() => <ProductDetails />} />
-          <Route exact path={routes.CLIENTS} component={() => <Clients />} />
-          <Route exact path={routes.CONTACT} component={() => <Contact />} />
+          <Route exact path={routes.HOME} component={Home} />
+          <Route exact path={routes.PRODUCTS} component={Products} />
+          <Route exact path={routes.PRODUCT_DETAILS} component={ProductDetails} />
+          <Route exact path={routes.CLIENTS} component={Clients} />
+          <Route exact path={routes.CONTACT} component={Contact} />
         </div>
       </Router>
     );
